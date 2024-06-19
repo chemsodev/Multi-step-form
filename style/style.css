@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Ubuntu_Regular";
+    src:
+      url("assets/fonts/Ubuntu-Regular.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Ubuntu_Medium";
+    src:
+      url("assets/fonts/Ubuntu-Medium.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Ubuntu_Bold";
+    src:
+      url("assets/fonts/Ubuntu-Bold.ttf") format("ttf");
+  }
+  :root{
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+    width: 100%;
+}
+body{
+    font-family: "Ubuntu_Regular";
+    font-size: 16px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--magnolia);
+}
+#step2, #step3, #step4,#step5{
+    display: none;
+}
+#container{
+    width:70%;
+    height: 80%;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+#sidebar{
+background-image: url(assets/images/bg-sidebar-desktop.svg);
+background-repeat: no-repeat;
+background-size: cover;
+width: 30%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 30px;
+color: var(--white);    
+}
