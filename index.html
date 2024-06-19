@@ -1,199 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Multi-step form</title>
 
-  <title>Frontend Mentor | Multi-step form</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
-  <link rel="stylesheet" href="style/style.css">
-</head>
+  <body>
+    <div id="container">
+      <!-- Sidebar start -->
+      <div id="sidebar">
+        <div class="step">
+          <div class="circle">
+            <p>1</p>
+          </div>
+          <div>
+            <p>Step 1</p>
+            <h3>Your info</h3>
+          </div>
+        </div>
 
-<body>
-  <div id="container">
-    <!-- Sidebar start -->
-    <div id="sidebar">
+        <div class="step">
+          <div class="circle">
+            <p>2</p>
+          </div>
+          <div>
+            <p>Step 2</p>
+            <h3>Select plan</h3>
+          </div>
+        </div>
 
-      <div class="step"> 
-      <div class="circle">
-        <p>1</p>
-      </div>
-      <div>
-      <p>Step 1</p>
-      <h3>Your info</h3>
-    </div>
-      </div>
-      
-      <div class="step"> 
-      <div class="circle">
-        <p>2</p>
-      </div>
-      <div>
-      <p>Step 2</p>
-      <h3>Select plan</h3>
-    </div>
-      </div>
-
-      <div class="step"> 
-      <div class="circle">
-        <p>3</p>
-      </div>
-      <div>
-      <p>Step 3</p>
-      <h3>Add-ons</h3>
-      </div>
-</div>
-      <div class="step"> 
-      <div class="circle">
-        <p>4</p>
-      </div>
-      <div>
-      <p>Step 4</p>
-      <h3>Summary</h3>
-      </div>
-    </div>
-    </div>
-    <!-- Sidebar end -->
-
-    <!-- Step 1 start -->
-    <div id="Step1">
-      <h1>Personal info</h1>
-      <p>Please provide your name, email address, and phone number.</p>
-
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="e.g. Stephen King">
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" placeholder="e.g. stephenking@lorem">
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
-
-      <button id="NextStep">Next Step</button>
-
-    </div>
-    <!-- Step 1 end -->
-
-    <!-- Step 2 start -->
-    <div id="Step2">
-      <h1>Select your plan</h1>
-      <p>You have the option of monthly or yearly billing.</p>
-      <div id="Arcade">
-        <img src="assets/images/icon-arcade.svg" alt="icon">
-        <div class="plan-info">
-          <h4>Arcade</h4>
-          <p>$9/mo</p>
+        <div class="step">
+          <div class="circle">
+            <p>3</p>
+          </div>
+          <div>
+            <p>Step 3</p>
+            <h3>Add-ons</h3>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">
+            <p>4</p>
+          </div>
+          <div>
+            <p>Step 4</p>
+            <h3>Summary</h3>
+          </div>
         </div>
       </div>
+      <!-- Sidebar end -->
 
-      <div id="Advanced">
-        <img src="assets/images/icon-advanced.svg" alt="icon">
-        <div class="plan-info">
-          <h4>Advanced</h4>
-          <p>$12/mo</p>
+      <!-- Step 1 start -->
+      <div id="Step1">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="e.g. Stephen King" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="e.g. stephenking@lorem" />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" />
+
+        <button id="NextStep">Next Step</button>
+      </div>
+      <!-- Step 1 end -->
+
+      <!-- Step 2 start -->
+      <div id="Step2">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+        <div id="Arcade">
+          <img src="assets/images/icon-arcade.svg" alt="icon" />
+          <div class="plan-info">
+            <h4>Arcade</h4>
+            <p>$9/mo</p>
+          </div>
         </div>
-      </div>
 
-      <div id="Pro">
-        <img src="assets/images/icon-pro.svg" alt="icon">
-        <div class="plan-info">
-          <h4>Pro</h4>
-          <p>$15/mo</p>
+        <div id="Advanced">
+          <img src="assets/images/icon-advanced.svg" alt="icon" />
+          <div class="plan-info">
+            <h4>Advanced</h4>
+            <p>$12/mo</p>
+          </div>
         </div>
-      </div>
 
-      <div id="billing">
-        <p>Monthly</p>
-        <label for="switch">
-          <input type="checkbox">
-          <span class="slider"></span>
-        </label>
-        <p>Yearly</p>
-      </div>
+        <div id="Pro">
+          <img src="assets/images/icon-pro.svg" alt="icon" />
+          <div class="plan-info">
+            <h4>Pro</h4>
+            <p>$15/mo</p>
+          </div>
+        </div>
 
-      <div id="buttons">
-        <button id="GoBack">Go Back</button>
-        <button id="NextStep2">Next Step</button>
-      </div>
-
-    </div>
-    <!-- Step 2 end -->
-
-    <!-- Step 3 start -->
-    <div id="Step3">
-      <h1>Pick add-ons</h1>
-      <p>Add-ons help enhance your gaming experience.</p>
-      <div id="addons">
-        <div id="OnlineService">
-          <input type="checkbox" id="checkbox">
-          <label for="checkbox">
-            <div class="addon-info">
-              <h4>Online service</h4>
-              <p>Access to multiplayer games</p>
-            </div>
+        <div id="billing">
+          <p>Monthly</p>
+          <label for="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
           </label>
-          <p class="addon-price">$1/mo</p>
-
-        
+          <p>Yearly</p>
         </div>
-   
-      <h4>Larger storage</h4>
-      Extra 1TB of cloud save
-      +$2/mo
 
-      Customizable Profile
-      Custom theme on your profile
-      +$2/mo
+        <div id="buttons">
+          <button id="GoBack">Go Back</button>
+          <button id="NextStep2">Next Step</button>
+        </div>
       </div>
-      Go Back
-      Next Step
+      <!-- Step 2 end -->
+
+      <!-- Step 3 start -->
+      <div id="Step3">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <div id="addons">
+          <div id="OnlineService">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox">
+              <div class="addon-info">
+                <h4>Online service</h4>
+                <p>Access to multiplayer games</p>
+              </div>
+            </label>
+            <p class="addon-price">$1/mo</p>
+          </div>
+
+          <h4>Larger storage</h4>
+          Extra 1TB of cloud save +$2/mo Customizable Profile Custom theme on
+          your profile +$2/mo
+        </div>
+        Go Back Next Step
+      </div>
+      <!-- Step 3 end -->
+
+      <!-- Step 4 start -->
+      <div id="Step4">
+        Finishing up Double-check everything looks OK before confirming.
+
+        <!-- Dynamically add subscription and add-on selections here -->
+
+        Total (per month/year) Go Back Confirm
+      </div>
+      <!-- Step 4 end -->
+
+      <!-- Step 5 start -->
+      <div id="Step5">
+        Thank you! Thanks for confirming your subscription! We hope you have fun
+        using our platform. If you ever need support, please feel free to email
+        us at support@loremgaming.com.
+      </div>
+      <!-- Step 5 end -->
     </div>
-    <!-- Step 3 end -->
-
-    <!-- Step 4 start -->
-    <div id="Step4">
-      Finishing up
-      Double-check everything looks OK before confirming.
-
-      <!-- Dynamically add subscription and add-on selections here -->
-
-      Total (per month/year)
-
-      Go Back
-      Confirm
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">chemso/aymen</a>.
     </div>
-    <!-- Step 4 end -->
-
-    <!-- Step 5 start -->
-    <div id="Step5">
-      Thank you!
-
-      Thanks for confirming your subscription! We hope you have fun
-      using our platform. If you ever need support, please feel free
-      to email us at support@loremgaming.com.
-    </div>
-    <!-- Step 5 end -->
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">chemso/aymen</a>.
-  </div>
-  <script src="script/script.js"></script>
-</body>
-
+    <script src="script/script.js"></script>
+  </body>
 </html>
