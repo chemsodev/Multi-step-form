@@ -44,7 +44,10 @@ body{
     justify-content: center;
     background-color: var(--magnolia);
 }
-#step2, #step3, #step4,#step5{
+ #Step2, #Step3, #Step4, #Step5{
+    display: none;
+}
+.hide{
     display: none;
 }
 #container{
@@ -56,7 +59,7 @@ body{
     background-color: var(--white);
 }
 #sidebar{
-background-image: url(assets/images/bg-sidebar-desktop.svg);
+background-image: url(../assets/images/bg-sidebar-desktop.svg);
 background-repeat: no-repeat;
 background-size: cover;
 width: 30%;
@@ -66,4 +69,21 @@ flex-direction: column;
 justify-content: space-between;
 padding: 30px;
 color: var(--white);    
+}
+.circle{
+    border: 1px solid var(--light-blue);
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-blue);
+}
+.step{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width:50% ;
+    justify-content: space-between;
 }
