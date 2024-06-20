@@ -1,142 +1,227 @@
 @font-face {
-    font-family: "Ubuntu_Regular";
-    src:
-      url("assets/fonts/Ubuntu-Regular.ttf") format("ttf");
-  }
-  @font-face {
-    font-family: "Ubuntu_Medium";
-    src:
-      url("assets/fonts/Ubuntu-Medium.ttf") format("ttf");
-  }
-  @font-face {
-    font-family: "Ubuntu_Bold";
-    src:
-      url("assets/fonts/Ubuntu-Bold.ttf") format("ttf");
-  }
-  :root{
-    --marine-blue: hsl(213, 96%, 18%);
-    --purplish-blue: hsl(243, 100%, 62%);
-    --pastel-blue: hsl(228, 100%, 84%);
-    --light-blue: hsl(206, 94%, 87%);
-    --strawberry-red: hsl(354, 84%, 57%);
-    --cool-gray: hsl(231, 11%, 63%);
-    --light-gray: hsl(229, 24%, 87%);
-    --magnolia: hsl(217, 100%, 97%);
-    --alabaster: hsl(231, 100%, 99%);
-    --white: hsl(0, 0%, 100%);
-  }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Ubuntu_Regular";
+  src: url("assets/fonts/Ubuntu-Regular.ttf") format("ttf");
 }
-html{
-    height: 100vh;
-    width: 100%;
+@font-face {
+  font-family: "Ubuntu_Medium";
+  src: url("assets/fonts/Ubuntu-Medium.ttf") format("ttf");
 }
-body{
-    font-family: "Ubuntu_Regular";
-    font-size: 16px;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--magnolia);
+@font-face {
+  font-family: "Ubuntu_Bold";
+  src: url("assets/fonts/Ubuntu-Bold.ttf") format("ttf");
 }
- #Step1, #Step3, #Step4, #Step5{
-    display: none;
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
 }
-.hide{
-    display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#container{
-    width:70%;
-    height: 80%;
-    display: flex;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: var(--white);
+html {
+  height: 100vh;
+  width: 100%;
 }
-#sidebar{
-background-image: url(../assets/images/bg-sidebar-desktop.svg);
-background-repeat: no-repeat;
-background-size: cover;
-width: 30%;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 30px;
-color: var(--white);    
+body {
+  font-family: "Ubuntu_Regular";
+  font-size: 16px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--magnolia);
 }
-.circle{
-    border: 1px solid var(--light-blue);
-    border-radius: 50%; 
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--light-blue);
+#Step1,
+#Step3,
+#Step4,
+#Step5 {
+  display: none;
 }
-.step{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width:50% ;
-    justify-content: space-between;
-} 
+.hide {
+  display: none;
+}
+#container {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+#sidebar {
+  background-image: url(../assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  color: var(--white);
+}
+.circle {
+  border: 1px solid var(--light-blue);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-blue);
+}
+.step {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+}
 
-#Step1  {
-    font-family: "Ubuntu_Regular" , sans-serif; 
-    margin-top: 3vw; 
-    margin-left: 6vw; 
-} 
+#Step1 {
+  font-family: "Ubuntu_Regular", sans-serif;
+  margin-top: 3vw;
+  margin-left: 6vw;
+}
 
 #Step1 h1 {
-    color: var(--marine-blue); 
-    font-size: 200%; 
-    padding: 0.5vw 0vw;
-} 
+  color: var(--marine-blue);
+  font-size: 200%;
+  padding: 0.5vw 0vw;
+}
 
 #Step1 p {
-    color: var(--cool-gray); 
-    padding-bottom: 3vw;
-} 
+  color: var(--cool-gray);
+  padding-bottom: 3vw;
+}
 
 #Step1 .NEP {
-    display: flex; 
-    flex-direction: column;
-} 
+  display: flex;
+  flex-direction: column;
+}
 
 #Step1 label {
-    color: var(--marine-blue);
-} 
+  color: var(--marine-blue);
+}
 
 #Step1 input {
-    height: 3vw;
-    border-radius: 5px;  
-    border-color: var(--cool-gray);  
-    padding-left: 1vw;     
-    margin-top: 0.5vw;
-    margin-bottom: 2vw; 
-    border-width: 1.2px;
-}  
+  height: 3vw;
+  border-radius: 5px;
+  border-color: var(--cool-gray);
+  padding-left: 1vw;
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+  border-width: 1.2px;
+}
 
 #Step1 button {
-    height: 3vw;
-    width: 7vw; 
-    color: white; 
-    background-color: var(--marine-blue); 
-    border-style: none; 
-    border-radius: 7px; 
-    cursor: pointer; 
-    margin-left: 28vw; 
-    margin-top: 5vw;
-} 
+  height: 3vw;
+  width: 7vw;
+  color: white;
+  background-color: var(--marine-blue);
+  border-style: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 28vw;
+  margin-top: 5vw;
+}
 
 #Step1 label {
-    font-size: medium;
+  font-size: medium;
 }
- 
+
+#Step2 {
+  font-family: "Ubuntu_Medium", sans-serif;
+  padding-left: 10vw;
+  margin-top: 3vw;
+}
+
+#Step2 h1 {
+  color: var(--marine-blue);
+  font-size: 190%;
+  margin-bottom: 0.5vw;
+  margin-left: 1vw;
+}
+
+#Step2 .first {
+  color: var(--cool-gray);
+  margin-bottom: 0.5vw;
+  margin-left: 1vw;
+}
+
+#Step2 .havingall {
+  display: flex;
+  flex-direction: row;
+}
+
+#Step2 .same {
+  height: 12vw;
+  width: 10vw;
+  border-color: var(--cool-gray);
+  border-radius: 10px;
+  border-style: solid;
+  padding: 1vw;
+  margin: 2vw 1vw;
+  border-width: 0.1vw;
+}
+
+.samei {
+  margin-top: 3vw;
+}
+
+#Step2 h4 {
+  color: var(--marine-blue);
+  font-weight: 600;
+}
+
+.samei p {
+  color: var(--cool-gray);
+  margin-top: 0.2vw;
+  font-size: small;
+}
+
+#billing {
+  display: flex;
+  flex-direction: row;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8vw;
+}
+#NextStep2 {
+  height: 3vw;
+  width: 7vw;
+  color: white;
+  background-color: var(--marine-blue);
+  border-style: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 20vw;
+}
+#GoBack {
+  height: 3vw;
+  width: 7vw;
+  background-color: var(--white);
+  color: var(--cool-gray);
+  border-style: none;
+  cursor: pointer;
+}
+
+#billing {
+  height: 3vw;
+  width: 34vw;
+  margin-left: 1vw;
+  border-radius: 10px;
+}
