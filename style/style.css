@@ -44,7 +44,7 @@ body {
 #Step1,
 #Step3,
 #Step4,
-#Step5 {
+#Step5  {
   display: none;
 }
 .hide {
@@ -192,7 +192,15 @@ body {
 
 #billing {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
+  justify-content: center;  
+  background-color: var(--alabaster); 
+  padding: 0.7vw;
+}  
+
+#billing p {
+
+  margin: 0vw 3vw;
 }
 
 #buttons {
@@ -225,3 +233,26 @@ body {
   margin-left: 1vw;
   border-radius: 10px;
 }
+
+#Step5{
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column; 
+  font-family:"Ubuntu_Bold" , sans-serif; 
+  padding: 10vw;
+} 
+
+#Step5 h1 {
+  color: var(--marine-blue);    
+  font-size: 190%; 
+  margin: 2vw 0 ;
+} 
+
+#Step5 p {
+  width: 28vw; 
+  text-align: center; 
+  font-size: small;
+  color: var(--cool-gray); 
+  line-height: 1.5vw;
+}  
