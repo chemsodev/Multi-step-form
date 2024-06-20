@@ -44,7 +44,7 @@ body{
     justify-content: center;
     background-color: var(--magnolia);
 }
- #Step2, #Step3, #Step4, #Step5{
+ #Step1, #Step3, #Step4, #Step5{
     display: none;
 }
 .hide{
@@ -88,3 +88,55 @@ color: var(--white);
     justify-content: space-between;
 } 
 
+#Step1  {
+    font-family: "Ubuntu_Regular" , sans-serif; 
+    margin-top: 3vw; 
+    margin-left: 6vw; 
+} 
+
+#Step1 h1 {
+    color: var(--marine-blue); 
+    font-size: 200%; 
+    padding: 0.5vw 0vw;
+} 
+
+#Step1 p {
+    color: var(--cool-gray); 
+    padding-bottom: 3vw;
+} 
+
+#Step1 .NEP {
+    display: flex; 
+    flex-direction: column;
+} 
+
+#Step1 label {
+    color: var(--marine-blue);
+} 
+
+#Step1 input {
+    height: 3vw;
+    border-radius: 5px;  
+    border-color: var(--cool-gray);  
+    padding-left: 1vw;     
+    margin-top: 0.5vw;
+    margin-bottom: 2vw; 
+    border-width: 1.2px;
+}  
+
+#Step1 button {
+    height: 3vw;
+    width: 7vw; 
+    color: white; 
+    background-color: var(--marine-blue); 
+    border-style: none; 
+    border-radius: 7px; 
+    cursor: pointer; 
+    margin-left: 28vw; 
+    margin-top: 5vw;
+} 
+
+#Step1 label {
+    font-size: medium;
+}
+ 

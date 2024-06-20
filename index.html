@@ -77,15 +77,16 @@
       <div id="Step1">
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
+        <div class="NEP">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="e.g. Stephen King" />
 
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="e.g. Stephen King" />
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="e.g. stephenking@lorem" />
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="e.g. stephenking@lorem" />
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" />
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" />
+        </div>
 
         <button id="NextStep">Next Step</button>
       </div>
@@ -148,32 +149,60 @@
                 <p>Access to multiplayer games</p>
               </div>
             </label>
-            <p class="addon-price">$1/mo</p>
+            <p class="addon-price">+$1/mo</p>
           </div>
-
-          <h4>Larger storage</h4>
-          Extra 1TB of cloud save +$2/mo Customizable Profile Custom theme on
-          your profile +$2/mo
+          <div id="LargerStorage">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox">
+              <div>
+                <h4>Larger storage</h4>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+            </label>
+            <p class="addon-price">+$1/mo</p>
+          </div>
+          <div id="customiseProfile">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox">
+              <div>
+                <h4>Customizable Profile</h4>
+                <p>custome them on your profile</p>
+              </div>
+            </label>
+            <p class="addon-price">+$1/mo</p>
+          </div>
         </div>
-        Go Back Next Step
+        <div>
+          <button>Go back</button>
+          <button>Next Step</button>
+        </div>
       </div>
       <!-- Step 3 end -->
 
       <!-- Step 4 start -->
       <div id="Step4">
-        Finishing up Double-check everything looks OK before confirming.
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
 
         <!-- Dynamically add subscription and add-on selections here -->
 
-        Total (per month/year) Go Back Confirm
+        <p>Total (per month/year)</p>
+        <div class="buttoons">
+          <button>Go Back</button>
+          <button>Confirm</button>
+        </div>
       </div>
       <!-- Step 4 end -->
 
       <!-- Step 5 start -->
       <div id="Step5">
-        Thank you! Thanks for confirming your subscription! We hope you have fun
-        using our platform. If you ever need support, please feel free to email
-        us at support@loremgaming.com.
+        <img src="" alt="" />
+        <h1>Thank you!</h1>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun using
+          our platform. If you ever need support, please feel free to email us
+          at support@loremgaming.com.
+        </p>
       </div>
       <!-- Step 5 end -->
     </div>
