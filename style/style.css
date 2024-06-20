@@ -32,7 +32,7 @@ html {
   width: 100%;
 }
 body {
-  font-family: "Ubuntu_Regular";
+  font-family: "Ubuntu_Regular", sans-serif;
   font-size: 16px;
   height: 100vh;
   width: 100%;
@@ -41,53 +41,63 @@ body {
   justify-content: center;
   background-color: var(--magnolia);
 }
-#Step1,
-#Step3,
-#Step4,
-#Step5  {
-  display: none;
-}
-.hide {
-  display: none;
-}
+
 #container {
-  width: 70%;
+  width: 68%;
   height: 80%;
   display: flex;
   border-radius: 20px;
   overflow: hidden;
   background-color: var(--white);
-}
+  padding: 15px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);}
 #sidebar {
   background-image: url(../assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 30%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px;
+  border-radius: 16px;
+}
+#content{
+    width: 100%;
+    height: 50%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+    justify-content: space-between;
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: "Ubuntu_Bold",sans-serif;
+}
+#content .circle p {
+  font-size: 18px;
+  font-family: "Ubuntu_Bold",sans-serif;
   color: var(--white);
 }
+#content p {
+color: var(--light-gray);
+font-weight: 500;
+font-size: 16px;}
 .circle {
-  border: 1px solid var(--light-blue);
+  border: 2px solid var(--light-blue);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--light-blue);
 }
 .step {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 50%;
-  justify-content: space-between;
+    display: flex;
+  width: 80%;
+  gap: 2vw;
+  height: 10%;
+  line-height: 25px;
+  letter-spacing: 3px;
 }
-
 #Step1 {
   font-family: "Ubuntu_Regular", sans-serif;
   margin-top: 3vw;
@@ -142,8 +152,8 @@ body {
 
 #Step2 {
   font-family: "Ubuntu_Medium", sans-serif;
-  padding-left: 10vw;
   margin-top: 3vw;
+  margin-left: 6vw;
 }
 
 #Step2 h1 {
@@ -196,6 +206,11 @@ body {
   justify-content: center;  
   background-color: var(--alabaster); 
   padding: 0.7vw;
+  align-items: center;
+  height: 3vw;
+  width: 34vw;
+  margin-left: 1vw;
+  border-radius: 10px;
 }  
 
 #billing p {
@@ -227,20 +242,51 @@ body {
   cursor: pointer;
 }
 
-#billing {
-  height: 3vw;
-  width: 34vw;
-  margin-left: 1vw;
-  border-radius: 10px;
+#Step3 {
+    font-family: "Ubuntu_Medium", sans-serif;
+    margin-top: 3vw;
+    margin-left: 6vw;
+    width: 60%;
+  }
+
+
+
+
+
+
+
+
+
+#addons{
+  display: flex; 
+  justify-content: space-between; 
+  flex-direction: column; 
+  width: 80%;
+  height: 50%;
+  border: 1px solid red;  
+}
+.addon{
+  display: flex; 
+  justify-content: space-between; 
+  width: 80%;
+  height: 25%;
+  border: 1px solid green;  
+  padding: 10px;
 }
 
+.ceperated{
+  display: flex; 
+  width: 50%;
+  border: 1px solid blue;
+  gap: 30px;
+}
 #Step5{
   display: flex; 
   align-items: center; 
   justify-content: center; 
   flex-direction: column; 
   font-family:"Ubuntu_Bold" , sans-serif; 
-  padding: 10vw;
+    padding: 10vw;
 } 
 
 #Step5 h1 {
@@ -256,3 +302,77 @@ body {
   color: var(--cool-gray); 
   line-height: 1.5vw;
 }  
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 6px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input + .slider {
+    background-color: var(--marine-blue);
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--marine-blue);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 28px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+/*hidiing the steps*/
+#Step1,
+#Step2,
+#Step4,
+#Step5 {
+  display: none;
+}
+.hide {
+  display: none;
+}
