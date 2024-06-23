@@ -14,17 +14,6 @@
 
     <title>Frontend Mentor | Multi-step form</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
     <link rel="stylesheet" href="style/style.css" />
   </head>
 
@@ -84,18 +73,18 @@
           <input type="text" id="name" placeholder="e.g. Stephen King" />
 
           <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="e.g. stephenking@lorem" />
+          <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" />
 
           <label for="phone">Phone Number</label>
           <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" />
         </div>
 
-      <button id="NextStep1" class="NextStep">Next Step</button>
-    </div>
-    <!-- Step 1 end -->
+        <button id="NextStep1" class="NextStep">Next Step</button>
+      </div>
+      <!-- Step 1 end -->
 
       <!-- Step 2 start -->
-      <div id="Step2">
+      <div id="Step2" >
         <h1>Select your plan</h1>
         <p class="first">You have the option of monthly or yearly billing.</p>
         <div class="havingall">
@@ -133,61 +122,13 @@
           <p>Yearly</p>
         </div>
 
-      <div id="buttons">
-        <button id="GoBack2" class="GoBack">Go Back</button>
-        <button id="NextStep2" class="NextStep">Next Step</button>
+        <div id="buttons">
+          <button id="GoBack2" class="GoBack">Go Back</button>
+          <button id="NextStep2" class="NextStep">Next Step</button>
+        </div>
       </div>
-    </div>
-    <!-- Step 2 end -->
+      <!-- Step 2 end -->
 
-    <!-- Step 3 start -->
-    <div id="Step3">
-      <h1>Pick add-ons</h1>
-      <p>Add-ons help enhance your gaming experience.</p>
-      <div id="addons">
-        <div id="OnlineService" class="addon">
-          <div class="ceperated">
-            <input type="checkbox" id="checkbox" />
-            <label for="checkbox">
-              <div class="addon-info">
-                <h4>Online service</h4>
-                <p>Access to multiplayer games</p>
-              </div>
-            </label>
-          </div>
-          <p class="addon-price">+$1/mo</p>
-        </div>
-        <div id="LargerStorage" class="addon">
-          <div class="ceperated">
-            <input type="checkbox" id="checkbox" />
-            <label for="checkbox">
-              <div>
-                <h4>Larger storage</h4>
-                <p>Extra 1TB of cloud save</p>
-              </div>
-            </label>
-          </div>
-          <p class="addon-price">+$1/mo</p>
-        </div>
-        <div id="customiseProfile" class="addon">
-          <div class="ceperated">
-            <input type="checkbox" id="checkbox" />
-            <label for="checkbox">
-              <div>
-                <h4>Customizable Profile</h4>
-                <p>custome them on your profile</p>
-              </div>
-            </label>
-          </div>
-          <p class="addon-price">+$1/mo</p>
-        </div>
-      </div>
-      <div>
-        <button id="GoBack3" class="GoBack">Go back</button>
-        <button id="NextStep3" class="NextStep">Next Step</button>
-      </div>
-    </div>
-    <!-- Step 3 end -->
       <!-- Step 3 start -->
       <div id="Step3">
         <h1>Pick add-ons</h1>
@@ -195,8 +136,8 @@
         <div id="addons">
           <div id="OnlineService" class="addon">
             <div class="ceperated">
-              <input type="checkbox" id="checkbox" />
-              <label for="checkbox">
+              <input type="checkbox" id="online-service-checkbox" />
+              <label for="online-service-checkbox">
                 <div class="addon-info">
                   <h4>Online service</h4>
                   <p>Access to multiplayer games</p>
@@ -207,8 +148,8 @@
           </div>
           <div id="LargerStorage" class="addon">
             <div class="ceperated">
-              <input type="checkbox" id="checkbox" />
-              <label for="checkbox">
+              <input type="checkbox" id="larger-storage-checkbox" />
+              <label for="larger-storage-checkbox">
                 <div>
                   <h4>Larger storage</h4>
                   <p>Extra 1TB of cloud save</p>
@@ -219,11 +160,11 @@
           </div>
           <div id="customiseProfile" class="addon">
             <div class="ceperated">
-              <input type="checkbox" id="checkbox" />
-              <label for="checkbox">
+              <input type="checkbox" id="custom-profile-checkbox" />
+              <label for="custom-profile-checkbox">
                 <div>
                   <h4>Customizable Profile</h4>
-                  <p>custome them on your profile</p>
+                  <p>Custom theme on your profile</p>
                 </div>
               </label>
             </div>
@@ -231,8 +172,8 @@
           </div>
         </div>
         <div>
-          <button id="GoBack3">Go back</button>
-          <button id="NextStep3" >Next Step</button>
+          <button id="GoBack3" class="GoBack">Go back</button>
+          <button id="NextStep3" class="NextStep">Next Step</button>
         </div>
       </div>
       <!-- Step 3 end -->
@@ -244,26 +185,19 @@
 
         <!-- Dynamically add subscription and add-on selections here -->
 
-      <p>Total (per month/year)</p>
-      <div class="buttoons">
-        <button id="GoBack4" class="GoBack">Go Back</button>
-        <button  id="confirm" class="NextStep">Confirm</button>
-      </div>
-    </div>
-    <!-- Step 4 end -->
         <p>Total (per month/year)</p>
         <div class="buttoons">
-          <button id="GoBack4" >Go Back</button>
-          <button id="NextStep4">Confirm</button>
+          <button id="GoBack4" class="GoBack">Go Back</button>
+          <button id="Confirm" class="NextStep">Confirm</button>
         </div>
       </div>
       <!-- Step 4 end -->
 
       <!-- Step 5 start -->
-      <div id="Step5">
+      <div id="Step5" >
         <img
-          src="C:\Users\ideaPad\Multi-step-form\assets\images\icon-thank-you.svg"
-          alt=""
+          src="assets/images/icon-thank-you.svg"
+          alt="Thank you"
         />
         <h1>Thank you!</h1>
         <p>

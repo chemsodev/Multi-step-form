@@ -10,6 +10,7 @@
   font-family: "Ubuntu_Bold";
   src: url("assets/fonts/Ubuntu-Bold.ttf") format("ttf");
 }
+
 :root {
   --marine-blue: hsl(213, 96%, 18%);
   --purplish-blue: hsl(243, 100%, 62%);
@@ -22,15 +23,18 @@
   --alabaster: hsl(231, 100%, 99%);
   --white: hsl(0, 0%, 100%);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   height: 100vh;
   width: 100%;
 }
+
 body {
   font-family: "Ubuntu_Regular", sans-serif;
   font-size: 16px;
@@ -50,7 +54,9 @@ body {
   overflow: hidden;
   background-color: var(--white);
   padding: 15px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);}
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 #sidebar {
   background-image: url(../assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
@@ -59,28 +65,33 @@ body {
   height: 100%;
   border-radius: 16px;
 }
-#content{
-    width: 100%;
-    height: 50%;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 30px;
-    justify-content: space-between;
-    color: var(--white);
-    text-transform: uppercase;
-    font-family: "Ubuntu_Bold",sans-serif;
+
+#content {
+  width: 100%;
+  height: 50%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  justify-content: space-between;
+  color: var(--white);
+  text-transform: uppercase;
+  font-family: "Ubuntu_Bold", sans-serif;
 }
+
 #content .circle p {
   font-size: 18px;
-  font-family: "Ubuntu_Bold",sans-serif;
+  font-family: "Ubuntu_Bold", sans-serif;
   color: var(--white);
 }
+
 #content p {
-color: var(--light-gray);
-font-weight: 500;
-font-size: 16px;}
+  color: var(--light-gray);
+  font-weight: 500;
+  font-size: 16px;
+}
+
 .circle {
   border: 2px solid var(--light-blue);
   border-radius: 50%;
@@ -90,14 +101,16 @@ font-size: 16px;}
   justify-content: center;
   align-items: center;
 }
+
 .step {
-    display: flex;
+  display: flex;
   width: 80%;
   gap: 2vw;
   height: 10%;
   line-height: 25px;
   letter-spacing: 3px;
 }
+
 #Step1 {
   font-family: "Ubuntu_Regular", sans-serif;
   margin-top: 3vw;
@@ -202,19 +215,18 @@ font-size: 16px;}
 
 #billing {
   display: flex;
-  flex-direction: row; 
-  justify-content: center;  
-  background-color: var(--alabaster); 
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--alabaster);
   padding: 0.7vw;
   align-items: center;
   height: 3vw;
   width: 34vw;
   margin-left: 1vw;
   border-radius: 10px;
-}  
+}
 
 #billing p {
-
   margin: 0vw 3vw;
 }
 
@@ -222,8 +234,8 @@ font-size: 16px;}
   display: flex;
   flex-direction: row;
   margin-top: 8vw;
-
 }
+
 .NextStep {
   height: 3vw;
   width: 7vw;
@@ -236,6 +248,7 @@ font-size: 16px;}
   font-family: "Ubuntu_Bold", sans-serif;
   font-size: 16px;
 }
+
 .GoBack {
   height: 3vw;
   width: 7vw;
@@ -246,145 +259,141 @@ font-size: 16px;}
   font-family: "Ubuntu_Bold", sans-serif;
   font-size: 16px;
 }
-#Confirm{
+
+#Confirm {
   background-color: var(--purplish-blue);
 }
 
 #Step3 {
-    font-family: "Ubuntu_Medium", sans-serif;
-    margin-top: 3vw;
-    margin-left: 6vw;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
+  font-family: "Ubuntu_Medium", sans-serif;
+  margin-top: 3vw;
+  margin-left: 6vw;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 
-
-
-
-
-
-
-
-
-#addons{
-  display: flex; 
-  justify-content: space-between; 
-  flex-direction: column; 
+#addons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 80%;
   height: 50%;
-  border: 1px solid red;  
+  border: 1px solid red;
 }
-.addon{
-  display: flex; 
-  justify-content: space-between; 
+
+.addon {
+  display: flex;
+  justify-content: space-between;
   width: 80%;
   height: 25%;
-  border: 1px solid green;  
+  border: 1px solid green;
   padding: 10px;
 }
 
-.ceperated{
-  display: flex; 
+.ceperated {
+  display: flex;
   width: 50%;
   border: 1px solid blue;
   gap: 30px;
 }
-#Step5{
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+#step4{
+  display: flex;
   flex-direction: column; 
-  font-family:"Ubuntu_Bold" , sans-serif; 
-    padding: 10vw;
-} 
+  width: 25vw;
+
+}
+#Step5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Ubuntu_Bold", sans-serif;
+  padding: 10vw;
+}
 
 #Step5 h1 {
-  color: var(--marine-blue);    
-  font-size: 190%; 
-  margin: 2vw 0 ;
-} 
+  color: var(--marine-blue);
+  font-size: 190%;
+  margin: 2vw 0;
+}
 
 #Step5 p {
-  width: 28vw; 
-  text-align: center; 
+  width: 25vw;
+  text-align: center;
   font-size: small;
-  color: var(--cool-gray); 
+  color: var(--cool-gray);
   line-height: 1.5vw;
-}  
+}
+
 /* The switch - the box around the slider */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 28px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 6px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input + .slider {
-    background-color: var(--marine-blue);
-  }
-
-  input:focus + .slider {
-    box-shadow: 0 0 1px var(--marine-blue);
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(28px);
-    -ms-transform: translateX(28px);
-    transform: translateX(28px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 28px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-
-
-/*hidiing the steps*/
-#Step2,
-#Step3,
-#Step4,
-#Step5 {
-  display: none;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
 }
-.hide {
-  display: none;
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 6px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input + .slider {
+  background-color: var(--marine-blue);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--marine-blue);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(28px);
+  -ms-transform: translateX(28px);
+  transform: translateX(28px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 28px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#step2,
+#step3,
+#step4,
+#step5 {
+display: none;
 }
