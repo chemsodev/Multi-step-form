@@ -10,7 +10,6 @@
   font-family: "Ubuntu_Bold";
   src: url("assets/fonts/Ubuntu-Bold.ttf") format("ttf");
 }
-
 :root {
   --marine-blue: hsl(213, 96%, 18%);
   --purplish-blue: hsl(243, 100%, 62%);
@@ -20,21 +19,18 @@
   --cool-gray: hsl(231, 11%, 63%);
   --light-gray: hsl(229, 24%, 87%);
   --magnolia: hsl(217, 100%, 97%);
-  --alabaster: hsl(231, 100%, 99%);
+  --alabaster: hsl(228, 59%, 28%);
   --white: hsl(0, 0%, 100%);
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   height: 100vh;
   width: 100%;
 }
-
 body {
   font-family: "Ubuntu_Regular", sans-serif;
   font-size: 16px;
@@ -56,7 +52,6 @@ body {
   padding: 15px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
-
 #sidebar {
   background-image: url(../assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
@@ -65,7 +60,6 @@ body {
   height: 100%;
   border-radius: 16px;
 }
-
 #content {
   width: 100%;
   height: 50%;
@@ -79,19 +73,16 @@ body {
   text-transform: uppercase;
   font-family: "Ubuntu_Bold", sans-serif;
 }
-
 #content .circle p {
   font-size: 18px;
   font-family: "Ubuntu_Bold", sans-serif;
   color: var(--white);
 }
-
 #content p {
   color: var(--light-gray);
   font-weight: 500;
   font-size: 16px;
 }
-
 .circle {
   border: 2px solid var(--light-blue);
   border-radius: 50%;
@@ -101,7 +92,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .step {
   display: flex;
   width: 80%;
@@ -110,7 +100,6 @@ body {
   line-height: 25px;
   letter-spacing: 3px;
 }
-
 #Step1 {
   font-family: "Ubuntu_Regular", sans-serif;
   margin-top: 3vw;
@@ -156,7 +145,7 @@ body {
   border-radius: 7px;
   cursor: pointer;
   margin-left: 28vw;
-  margin-top: 5vw;
+  margin-top: 3vw;
 }
 
 #Step1 label {
@@ -217,7 +206,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: var(--alabaster);
+  background-color: var(--magnolia);
   padding: 0.7vw;
   align-items: center;
   height: 3vw;
@@ -234,34 +223,25 @@ body {
   display: flex;
   flex-direction: row;
   margin-top: 8vw;
+  margin-left: 1vw;
 }
-
-.NextStep {
+#NextStep2 {
   height: 3vw;
   width: 7vw;
   color: white;
   background-color: var(--marine-blue);
   border-style: none;
-  border-radius: 8px;
+  border-radius: 7px;
   cursor: pointer;
   margin-left: 20vw;
-  font-family: "Ubuntu_Bold", sans-serif;
-  font-size: 16px;
 }
-
-.GoBack {
+#GoBack2 {
   height: 3vw;
   width: 7vw;
   background-color: var(--white);
   color: var(--cool-gray);
   border-style: none;
   cursor: pointer;
-  font-family: "Ubuntu_Bold", sans-serif;
-  font-size: 16px;
-}
-
-#Confirm {
-  background-color: var(--purplish-blue);
 }
 
 #Step3 {
@@ -269,10 +249,6 @@ body {
   margin-top: 3vw;
   margin-left: 6vw;
   width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
 }
 
 #addons {
@@ -283,7 +259,6 @@ body {
   height: 50%;
   border: 1px solid red;
 }
-
 .addon {
   display: flex;
   justify-content: space-between;
@@ -298,12 +273,6 @@ body {
   width: 50%;
   border: 1px solid blue;
   gap: 30px;
-}
-#step4{
-  display: flex;
-  flex-direction: column; 
-  width: 25vw;
-
 }
 #Step5 {
   display: flex;
@@ -321,13 +290,12 @@ body {
 }
 
 #Step5 p {
-  width: 25vw;
+  width: 28vw;
   text-align: center;
   font-size: small;
   color: var(--cool-gray);
   line-height: 1.5vw;
 }
-
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -391,9 +359,13 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-#step2,
-#step3,
-#step4,
-#step5 {
-display: none;
+/*hidiing the steps*/
+#Step1,
+#Step3,
+#Step4,
+#Step5 {
+  display: none;
+}
+.hide {
+  display: none;
 }
