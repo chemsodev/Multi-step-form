@@ -357,12 +357,60 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+} 
+#Step4{
+  margin-top: 3vw; 
+  margin-left: 9vw;
 }
+#Step4 h1{
+  color: var(--marine-blue); 
+  padding-bottom: 1vw;
+} 
+
+#Step4 .la{
+  color: var(--cool-gray); 
+  padding-bottom: 18vw;
+} 
+
+#Step4 .li{
+  color: var(--cool-gray); 
+  padding-bottom: 7vw;
+} 
+
+#Confirm{
+  height: 3vw;
+  width: 7vw;
+  color: white;
+  background-color: var(--purplish-blue);
+  border-style: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 20vw;
+} 
+
+#GoBack4{
+  height: 3vw;
+  width: 7vw;
+  background-color: var(--white);
+  color: var(--cool-gray);
+  border-style: none;
+  cursor: pointer; 
+ 
+} 
+
+#rlast{
+  display:flex ; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center;  
+}
+
+
 
 /*hidiing the steps*/
 #Step1,
 #Step3,
-#Step4,
+#Step2,
 #Step5 {
   display: none;
 }
