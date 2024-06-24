@@ -434,8 +434,20 @@ input:checked + .slider:before {
   align-items: center; 
   justify-content: center;  
 }
+#name ,
+#email ,
+#phone {
+  width: 60%;
+outline-color: var(--alabaster);
+border-radius: 16px;
+}
 
-
+#Step1 span{
+  margin-left: 43%;
+  font-size: small;
+  font-family: "Ubuntu_Bold", sans-serif;
+  font-weight: 600;
+}
 
 /*hidiing the steps*/
 #Step1,
@@ -443,6 +455,14 @@ input:checked + .slider:before {
 #Step2,
 #Step5 {
   display: none;
+}
+.NextStep :hover{
+  cursor: pointer;
+  color: var(--alabaster);
+}
+.GoBack :hover{
+  cursor: pointer;
+  color: var(--marine-blue);
 }
 .hide {
   display: none;
