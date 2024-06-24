@@ -104,15 +104,18 @@ body {
   font-family: "Ubuntu_Regular", sans-serif;
   margin-top: 3vw;
   margin-left: 6vw;
+  width: 60%;
+
 }
 
-#Step1 h1 {
+#Step1 h1 ,#Step3 h1{
   color: var(--marine-blue);
   font-size: 200%;
   padding: 0.5vw 0vw;
 }
 
-#Step1 p {
+
+#Step1 p ,#Step3 p {
   color: var(--cool-gray);
   padding-bottom: 3vw;
 }
@@ -137,15 +140,13 @@ body {
 }
 
 #Step1 button {
-  height: 3vw;
-  width: 7vw;
   color: white;
   background-color: var(--marine-blue);
   border-style: none;
   border-radius: 7px;
   cursor: pointer;
   margin-left: 28vw;
-  margin-top: 3vw;
+  margin-top: 4.5vw;
 }
 
 #Step1 label {
@@ -156,6 +157,8 @@ body {
   font-family: "Ubuntu_Medium", sans-serif;
   margin-top: 3vw;
   margin-left: 6vw;
+  width: 60%;
+
 }
 
 #Step2 h1 {
@@ -191,7 +194,7 @@ body {
   margin-top: 3vw;
 }
 
-#Step2 h4 {
+#Step2 h4 ,#Step3 h4 {
   color: var(--marine-blue);
   font-weight: 600;
 }
@@ -225,7 +228,7 @@ body {
   margin-top: 8vw;
   margin-left: 1vw;
 }
-#NextStep2 {
+.NextStep {
   height: 3vw;
   width: 7vw;
   color: white;
@@ -235,7 +238,7 @@ body {
   cursor: pointer;
   margin-left: 20vw;
 }
-#GoBack2 {
+.GoBack {
   height: 3vw;
   width: 7vw;
   background-color: var(--white);
@@ -247,40 +250,82 @@ body {
 #Step3 {
   font-family: "Ubuntu_Medium", sans-serif;
   margin-top: 3vw;
-  margin-left: 6vw;
+  margin-left:6vw;
   width: 60%;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vw; 
 }
-
+#move{
+  margin-left: 0.9vw;
+  margin-top: 0.4vw;
+}
+#addons-info{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
 #addons {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   width: 80%;
   height: 50%;
-  border: 1px solid red;
 }
 .addon {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  height: 25%;
-  border: 1px solid green;
+  height: 30%;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
   padding: 10px;
+  
 }
-
+.addon input{
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 2px;
+    width:20px;
+    height: 20px;;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+.addon-price{
+  color:var(--purplish-blue);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.addon-info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px ;
+}
 .ceperated {
   display: flex;
-  width: 50%;
-  border: 1px solid blue;
+  width: 70%;
   gap: 30px;
 }
 #Step5 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 60%;
   flex-direction: column;
   font-family: "Ubuntu_Bold", sans-serif;
   padding: 10vw;
+  margin-left: 6vw;
 }
 
 #Step5 h1 {
@@ -360,7 +405,8 @@ input:checked + .slider:before {
 } 
 #Step4{
   margin-top: 3vw; 
-  margin-left: 9vw;
+  margin-left: 6vw;
+  width: 60%;
 }
 #Step4 h1{
   color: var(--marine-blue); 
@@ -378,24 +424,8 @@ input:checked + .slider:before {
 } 
 
 #Confirm{
-  height: 3vw;
-  width: 7vw;
-  color: white;
   background-color: var(--purplish-blue);
-  border-style: none;
-  border-radius: 7px;
-  cursor: pointer;
-  margin-left: 20vw;
-} 
-
-#GoBack4{
-  height: 3vw;
-  width: 7vw;
-  background-color: var(--white);
-  color: var(--cool-gray);
-  border-style: none;
-  cursor: pointer; 
- 
+  
 } 
 
 #rlast{
@@ -409,7 +439,7 @@ input:checked + .slider:before {
 
 /*hidiing the steps*/
 #Step1,
-#Step3,
+#Step4,
 #Step2,
 #Step5 {
   display: none;

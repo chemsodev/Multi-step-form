@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'Step1', display: 'block' },
         { id: 'Step2', display: 'block' },
         { id: 'Step3', display: 'flex' },
-        { id: 'Step4', display: 'flex' },
+        { id: 'Step4', display: 'block' },
         { id: 'Step5', display: 'flex' }
     ];
     let currentStep = 0;
