@@ -61,8 +61,8 @@ body {
   border-radius: 16px;
 }
 #content {
-  width: 100%;
-  height: 50%;
+  width: 20vw;
+  height: 20vw;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -74,43 +74,51 @@ body {
   font-family: "Ubuntu_Bold", sans-serif;
 }
 #content .circle p {
-  font-size: 18px;
+  font-size: 1.5vw;
   font-family: "Ubuntu_Bold", sans-serif;
   color: var(--white);
 }
 #content p {
   color: var(--light-gray);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1vw;
 }
 .circle {
   border: 2px solid var(--light-blue);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 4vw;
+  height: 4vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .step {
   display: flex;
-  width: 80%;
+  width:18vw;
   gap: 2vw;
-  height: 10%;
-  line-height: 25px;
+  height: 2vw;
+  line-height: 1.5vw;
   letter-spacing: 3px;
+} 
+.step h3{
+  font-size: 1vw; 
 }
 #Step1 {
   font-family: "Ubuntu_Regular", sans-serif;
   margin-top: 3vw;
   margin-left: 6vw;
   width: 60%;
-
 }
 
-#Step1 h1 ,#Step3 h1{
+#Step1 h1{
   color: var(--marine-blue);
   font-size: 200%;
+  padding: 0.5vw 0vw;
+} 
+
+#Step3 h1{
+  color: var(--marine-blue);
+  font-size: 3vw;
   padding: 0.5vw 0vw;
 }
 
@@ -136,7 +144,9 @@ body {
   padding-left: 1vw;
   margin-top: 0.5vw;
   margin-bottom: 2vw;
-  border-width: 1.2px;
+  border-width: 1.2px;  
+  cursor: pointer; 
+  color: var(--marine-blue); 
 }
 
 #Step1 button {
@@ -146,7 +156,11 @@ body {
   border-radius: 7px;
   cursor: pointer;
   margin-left: 28vw;
-  margin-top: 4.5vw;
+  margin-top: 3vw; 
+} 
+
+#Step1 button:hover{
+  background-color: var(--alabaster);
 }
 
 #Step1 label {
@@ -187,8 +201,14 @@ body {
   border-style: solid;
   padding: 1vw;
   margin: 2vw 1vw;
-  border-width: 0.1vw;
+  border-width: 0.1vw; 
+  cursor: pointer; 
+} 
+
+#Step2 .same:hover{
+  border-color: var(--purplish-blue);
 }
+
 
 .samei {
   margin-top: 3vw;
@@ -255,36 +275,43 @@ body {
   display:flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1vw; 
-}
+  gap: 1vw;  
+} 
+
 #move{
-  margin-left: 0.9vw;
-  margin-top: 0.4vw;
+  margin-top: 6vw; 
+  margin-left:0.8vw;
 }
+
 #addons-info{
-  height: 80%;
+  height: 70%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3vw;
 }
 #addons {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   width: 600px;
-  height:300px;
+  height:300px; 
+  cursor: pointer;
 }
 .addon {
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  height: 30%;
+  width: 33vw;
+  height: 5vw;
   border: 1px solid var(--light-gray);
   border-radius: 8px;
   padding: 10px;
-  
+  cursor: pointer;
 }
+
+.addon:hover{
+  border-color: var(--purplish-blue);
+}
+
 .addon input{
     appearance: none;
     -webkit-appearance: none;
@@ -297,7 +324,7 @@ body {
     border-radius: 2px;
     width:20px;
     height: 20px;;
-    margin-top: 20px;
+    margin-top: 1vw;
     margin-left: 10px;
   }
   
@@ -310,13 +337,19 @@ body {
 .addon-info{
   display: flex;
   flex-direction: column;
-  gap: 10px ;
+  gap: 0.2vw;
 }
 .ceperated {
   display: flex;
   width: 70%;
   gap: 30px;
+} 
+#Step3 h4   {
+  color: var(--marine-blue) ; 
+  font-size: 1.2vw;
 }
+
+
 #Step5 {
   display: flex;
   align-items: center;
@@ -425,8 +458,13 @@ input:checked + .slider:before {
 
 #Confirm{
   background-color: var(--purplish-blue);
-  
-} 
+  margin-top: 0.5vw;  
+  margin-right: 3vw;
+}  
+
+#Confirm:hover{
+  background-color: var(--pastel-blue );
+}
 
 #rlast{
   display:flex ; 
@@ -451,7 +489,7 @@ border-radius: 16px;
 
 /*hidiing the steps*/
 #Step1,
-#Step4,
+#Step3,
 #Step2,
 #Step5 {
   display: none;
@@ -467,3 +505,7 @@ border-radius: 16px;
 .hide {
   display: none;
 }
+
+.active-circle {
+  background-color: var(--light-blue); 
+} 
