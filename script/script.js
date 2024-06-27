@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const circles = document.querySelectorAll(".circle");
         circles.forEach((circle, index) => {
             if (index === step) {
-                circle.classList.add("active-circle");
+                circle.classList.add("active-circle"); 
+                circle.classList.add("active-circle-p");
             } else {
                 circle.classList.remove("active-circle");
             }
