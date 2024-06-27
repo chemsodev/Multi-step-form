@@ -508,4 +508,5 @@ border-radius: 16px;
 
 .active-circle {
   background-color: var(--light-blue); 
+  color: black;
 } 
