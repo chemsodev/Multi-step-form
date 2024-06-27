@@ -76,7 +76,7 @@ body {
 #content .circle p {
   font-size: 1.5vw;
   font-family: "Ubuntu_Bold", sans-serif;
-  color: var(--white);
+  color: white;
 }
 #content p {
   color: var(--light-gray);
@@ -159,10 +159,6 @@ body {
   margin-top: 3vw; 
 } 
 
-#Step1 button:hover{
-  background-color: var(--alabaster);
-}
-
 #Step1 label {
   font-size: medium;
 }
@@ -192,10 +188,9 @@ body {
   display: flex;
   flex-direction: row;
 }
-
 #Step2 .same {
-  height: 12vw;
-  width: 10vw;
+  height: 9vw;
+  width: 8vw;
   border-color: var(--cool-gray);
   border-radius: 10px;
   border-style: solid;
@@ -204,7 +199,9 @@ body {
   border-width: 0.1vw; 
   cursor: pointer; 
 } 
-
+#Step2 .selected {
+  border-color: var(--purplish-blue);
+}
 #Step2 .same:hover{
   border-color: var(--purplish-blue);
 }
@@ -311,23 +308,38 @@ body {
 .addon:hover{
   border-color: var(--purplish-blue);
 }
+.addon input {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center; /* Corrected property from align-content to align-items */
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  margin-top: 1vw;
+  margin-left: 10px;
+  background-color: var(--white); /* Default background color */
+}
 
-.addon input{
-    appearance: none;
-    -webkit-appearance: none;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-size: 2rem;
-    padding: 0.1rem;
-    border: 1px solid var(--light-gray);
-    border-radius: 2px;
-    width:20px;
-    height: 20px;;
-    margin-top: 1vw;
-    margin-left: 10px;
-  }
-  
+.addon input:checked {
+  background-color: var(--purplish-blue);
+  border-color: blue;
+
+}
+
+.addon input:checked::before {
+  content: '✓';
+  color: white;
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.8; /* Adjust to center the checkmark vertically */
+}
+
 .addon-price{
   color:var(--purplish-blue);
   height: 100%;
@@ -494,11 +506,15 @@ border-radius: 16px;
 #Step5 {
   display: none;
 }
-.NextStep :hover{
+.NextStep:hover{
   cursor: pointer;
-  color: var(--alabaster);
+  background-color: var(--alabaster);
 }
-.GoBack :hover{
+#NextStep1:hover{
+  cursor: pointer;
+  background-color: var(--alabaster);
+}
+.GoBack:hover{
   cursor: pointer;
   color: var(--marine-blue);
 }
@@ -509,7 +525,10 @@ border-radius: 16px;
 .active-circle {
   background-color: var(--light-blue); 
 }  
+#content .active-circle p{
+  color: var(--marine-blue);
+}  
 
-.active-circle-p {
-  color: black;
+#Step2 .free{
+  color: var(--marine-blue);
 }

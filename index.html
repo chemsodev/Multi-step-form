@@ -88,9 +88,9 @@
         <h1>Select your plan</h1>
         <p class="first">You have the option of monthly or yearly billing.</p>
         <div class="havingall">
-          <div class="same" id="Arcade">
+          <div  class="same" id="Arcade">
             <img src="assets/images/icon-arcade.svg" alt="icon" />
-            <div class="samei" class="plan-info">
+            <div id="arcade" class="samei" class="plan-info">
               <h4>Arcade</h4>
               <p>$9/mo</p>
             </div>
@@ -98,7 +98,7 @@
 
           <div class="same" id="Advanced">
             <img src="assets/images/icon-advanced.svg" alt="icon" />
-            <div class="samei" class="plan-info">
+            <div id="advanced" class="samei" class="plan-info">
               <h4>Advanced</h4>
               <p>$12/mo</p>
             </div>
@@ -106,7 +106,7 @@
 
           <div class="same" id="Pro">
             <img src="assets/images/icon-pro.svg" alt="icon" />
-            <div class="samei" class="plan-info">
+            <div  id="pro" class="samei" class="plan-info">
               <h4>Pro</h4>
               <p>$15/mo</p>
             </div>
@@ -116,7 +116,7 @@
         <div id="billing">
           <p>Monthly</p>
           <label class="switch">
-            <input type="checkbox" />
+            <input type="checkbox" id="switcher"/>
             <span class="slider round"></span>
           </label>
           <p>Yearly</p>
@@ -124,7 +124,7 @@
 
         <div id="buttons">
           <button id="GoBack2" class="GoBack">Go Back</button>
-          <button id="NextStep2" class="NextStep">Next Step</button>
+          <button id="NextStep2"  class="NextStep">Next Step</button>
         </div>
       </div>
       <!-- Step 2 end -->
@@ -139,7 +139,7 @@
         <div id="addons">
           <div id="OnlineService" class="addon">
             <div class="ceperated">
-              <input type="checkbox" id="online-service-checkbox" />
+              <input type="checkbox" id="online-service-checkbox" class="checkbox"/>
               <label for="online-service-checkbox">
                 <div class="addon-info">
                   <h4>Online service</h4>
@@ -147,11 +147,11 @@
                 </div>
               </label>
             </div>
-            <label class="addon-price">+$1/mo</label>
+            <label id="onlineService" class="addon-price">+$1/mo</label>
           </div>
           <div id="LargerStorage" class="addon">
             <div class="ceperated">
-              <input type="checkbox" id="larger-storage-checkbox" />
+              <input type="checkbox" id="larger-storage-checkbox" class="checkbox" />
               <label for="larger-storage-checkbox">
                 <div class="addon-info" >
                   <h4>Larger storage</h4>
@@ -159,11 +159,11 @@
                 </div>
               </label>
             </div>
-            <label class="addon-price">+$2/mo</label>
+            <label id="largerStorage" class="addon-price">+$2/mo</label>
           </div>
           <div id="customiseProfile" class="addon">
             <div class="ceperated">
-              <input type="checkbox" id="custom-profile-checkbox" />
+              <input type="checkbox" id="custom-profile-checkbox" class="checkbox" />
               <label for="custom-profile-checkbox">
                 <div class="addon-info">
                   <h4>Customizable Profile</h4>
@@ -171,7 +171,7 @@
                 </div>
               </label>
             </div>
-            <label class="addon-price">+$2/mo</label>
+            <label id="customizableProfile" class="addon-price">+$2/mo</label>
           </div>
         </div>
       </div>
