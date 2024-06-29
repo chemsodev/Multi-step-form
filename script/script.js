@@ -8,7 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     let currentStep = 0;
 
-    
+    // Initialize user selections
+    let userSelections = {
+        plan: null,
+        addOns: []
+    };
+
     function showStep(step) {
         steps.forEach((stepInfo, index) => {
             const stepElement = document.getElementById(stepInfo.id);
@@ -27,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const circles = document.querySelectorAll(".circle");
         circles.forEach((circle, index) => {
             if (index === step) {
-                circle.classList.add("active-circle"); 
+                circle.classList.add("active-circle");
             } else {
                 circle.classList.remove("active-circle");
             }
@@ -92,19 +97,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return isValid;
     }
+
     function validateStep2() {
         const plan = document.getElementById("do it");
         const plan1 = document.getElementById("Arcade");
         const plan2 = document.getElementById("Advanced");
         const plan3 = document.getElementById("Pro");
+
         function setError(element) {
-         element.style.color = "var(--strawberry-red)";
+            element.style.color = "var(--strawberry-red)";
         }
-    
+
         function clearError(element) {
             element.style.color = "";
         }
-    
+
         if (plan1.classList.contains("selected") || plan2.classList.contains("selected") || plan3.classList.contains("selected")) {
             clearError(plan);
             return true;
@@ -113,9 +120,38 @@ document.addEventListener("DOMContentLoaded", function () {
             return false;
         }
     }
-    
+
+    function updateStep4() {
+        const subscriptionElement = document.getElementById('subscription');
+        const selectionsElement = document.getElementById('selections');
+        const totalElement = document.getElementById('total');
+
+        // Clear previous content
+        subscriptionElement.innerHTML = '';
+        selectionsElement.innerHTML = '';
+        totalElement.innerHTML = '';
+
+        // Add selected plan
+        if (userSelections.plan) {
+            subscriptionElement.innerHTML = `<p>${userSelections.plan.name} (Monthly)</p><p>$${userSelections.plan.price}/mo</p>`;
+        }
+
+        // Add selected add-ons
+        let totalPrice = userSelections.plan ? userSelections.plan.price : 0;
+        userSelections.addOns.forEach(addOn => {
+            const addOnElement = document.createElement('div');
+            addOnElement.innerHTML = `<p>${addOn.name}</p><p>+$${addOn.price}/mo</p>`;
+            selectionsElement.appendChild(addOnElement);
+            totalPrice += addOn.price;
+        });
+
+        // Add total price
+        totalElement.innerHTML = `<p>Total (per month): $${totalPrice}/mo</p>`;
+    }
+
     // Initialize by showing the first step
     showStep(currentStep);
+
     // Event listeners for Next Step buttons
     document.getElementById("NextStep1").addEventListener("click", function () {
         if (validateStep1()) {
@@ -126,12 +162,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("NextStep2").addEventListener("click", function () {
         if (validateStep2()) {
-        currentStep = 2;
-        showStep(currentStep);
+            const selectedPlan = document.querySelector('.same.selected');
+            if (selectedPlan) {
+                userSelections.plan = {
+                    name: selectedPlan.querySelector('h4').innerText,
+                    price: parseInt(selectedPlan.querySelector('p').innerText.replace(/[^0-9]/g, ''))
+                };
+                currentStep = 2;
+                showStep(currentStep);
+            } else {
+                alert('Please select a plan.');
+            }
         }
     });
 
     document.getElementById("NextStep3").addEventListener("click", function () {
+        const selectedAddOns = document.querySelectorAll('input[type="checkbox"]:checked');
+        userSelections.addOns = Array.from(selectedAddOns).map(addOn => ({
+            name: addOn.parentElement.querySelector('h4').innerText,
+            price: parseInt(addOn.parentElement.parentElement.getElementsByClassName("addon-price")[0].innerHTML.replace(/[^0-9]/g, ''))}));
+        updateStep4();
         currentStep = 3;
         showStep(currentStep);
     });
@@ -156,109 +206,114 @@ document.addEventListener("DOMContentLoaded", function () {
         currentStep = 2;
         showStep(currentStep);
     });
-});
 
-function selectplan(element) {
-    // Deselect all elements
-    document.querySelectorAll('.selected').forEach(selectedElement => {
-        selectedElement.classList.remove('selected');
+    function selectplan(element) {
+        // Deselect all elements
+        document.querySelectorAll('.selected').forEach(selectedElement => {
+            selectedElement.classList.remove('selected');
+        });
+
+        // Select the clicked element
+        element.classList.add('selected');
+    }
+
+    // Add event listeners to all elements with the class "same"
+    Array.from(document.getElementsByClassName('same')).forEach(el => {
+        el.addEventListener('click', function() {
+            selectplan(this);
+        });
     });
 
-    // Select the clicked element
-    element.classList.add('selected');
-}
+    // Get all elements with the class 'checkbox'
+    var checkboxes = document.getElementsByClassName('checkbox');
 
-// Add event listeners to all elements with the class "same"
-Array.from(document.getElementsByClassName('same')).forEach(el => {
-    el.addEventListener('click', function() {
-        selectplan(this);
-    });
-});
-// Get all elements with the class 'checkbox'
-var checkboxes = document.getElementsByClassName('checkbox');
-
-// Loop through each checkbox and add the event listener
-for (var i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].addEventListener('change', function() {
-        var addonDiv = this.parentElement.parentElement;
-        if (this.checked) {
-            addonDiv.style.borderColor = 'var(--purplish-blue)';
-        } else {
-            addonDiv.style.borderColor = 'var(--light-gray)';
-        }
-    });
-}
-const switcher = document.getElementById("switcher");
-const plans = [document.getElementById("arcade"),document.getElementById("advanced"),document.getElementById("pro")];
-const plansArray = Array.from(plans);
-const addons =[document.getElementById("onlineService"),document.getElementById("largerStorage"),document.getElementById("customizableProfile")];
-const addonsArray = Array.from(addons);
-switcher.addEventListener("click", function () {
-    plansArray.forEach((plan, index) => {
-                if (switcher.checked) {
-            switch (index) {
-                case 0:
-                    plan.parentElement.style.height = "10vw";
-                    plan.innerHTML = "<h4>Arcade</h4 ><p>$90/yr</p><p class='free'>2 months free</p>";
-                    break;
-                case 1:
-                    plan.parentElement.style.height = "10vw";   
-                    plan.innerHTML = "<h4>Advanced</h4><p>$120/yr</p><p class='free'>2 months free</p>";
-                    break;
-                case 2:
-                    plan.parentElement.style.height = "10vw";
-                    plan.innerHTML = "<h4>Pro</h4><p>$150/yr</p><p class='free'>2 months free</p>";
-                    break;
-                default:
-                    break;
+    // Loop through each checkbox and add the event listener
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].addEventListener('change', function() {
+            var addonDiv = this.parentElement.parentElement;
+            if (this.checked) {
+                addonDiv.style.borderColor = 'var(--purplish-blue)';
+            } else {
+                addonDiv.style.borderColor = 'var(--light-gray)';
             }
-        } else {
-            switch (index) {
-                case 0:
-                    plan.parentElement.style.height = "9vw";
-                    plan.innerHTML = " <h4>Arcade</h4><p>$9/mo</p>";
-                    break;
-                case 1:
-                    plan.parentElement.style.height = "9vw";
-                    plan.innerHTML = " <h4>Advanced</h4><p>$12/mo</p>";
-                    break;
-                case 2:
-                    plan.parentElement.style.height = "9vw";
-                    plan.innerHTML = " <h4>Pro</h4><p>$15/mo</p>";
-                    break;
-                default:
-                    break;
+        });
+    }
+
+    const switcher = document.getElementById("switcher");
+    const plans = [document.getElementById("arcade"), document.getElementById("advanced"), document.getElementById("pro")];
+    const plansArray = Array.from(plans);
+    const addons = document.getElementsByClassName("addon-price");
+    const addonsArray = Array.from(addons);
+
+    switcher.addEventListener("click", function () {
+        plansArray.forEach((plan, index) => {
+            if (switcher.checked) {
+                switch (index) {
+                    case 0:
+                        plan.parentElement.style.height = "10vw";
+                        plan.innerHTML = "<h4>Arcade</h4><p>$90/yr</p><p class='free'>2 months free</p>";
+                        break;
+                    case 1:
+                        plan.parentElement.style.height = "10vw";
+                        plan.innerHTML = "<h4>Advanced</h4><p>$120/yr</p><p class='free'>2 months free</p>";
+                        break;
+                    case 2:
+                        plan.parentElement.style.height = "10vw";
+                        plan.innerHTML = "<h4>Pro</h4><p>$150/yr</p><p class='free'>2 months free</p>";
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                switch (index) {
+                    case 0:
+                        plan.parentElement.style.height = "9vw";
+                        plan.innerHTML = " <h4>Arcade</h4><p>$9/mo</p>";
+                        break;
+                    case 1:
+                        plan.parentElement.style.height = "9vw";
+                        plan.innerHTML = " <h4>Advanced</h4><p>$12/mo</p>";
+                        break;
+                    case 2:
+                        plan.parentElement.style.height = "9vw";
+                        plan.innerHTML = " <h4>Pro</h4><p>$15/mo</p>";
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
+        });
+
+        addonsArray.forEach((addon, index) => {
+            if (switcher.checked) {
+                switch (index) {
+                    case 0:
+                        addon.innerHTML = "+$10/yr";
+                        break;
+                    case 1:
+                        addon.innerHTML = "+$20/yr";
+                        break;
+                    case 2:
+                        addon.innerHTML = "+$20/yr";
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                switch (index) {
+                    case 0:
+                        addon.innerHTML = "+$1/mo";
+                        break;
+                    case 1:
+                        addon.innerHTML = "+$2/mo";
+                        break;
+                    case 2:
+                        addon.innerHTML = "+$2/mo";
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
     });
-addonsArray.forEach((addon, index) => {
-        if (switcher.checked) {
-          switch (index) {
-            case 0:
-                addon.innerHTML="+$10/yr";
-                break;
-            case 1:
-                addon.innerHTML="+$20/yr";
-                break;
-            case 2:
-                addon.innerHTML="+$20/yr";
-                break;
-            default:
-                break;
-          }
-        } else {
-          switch (index) {
-            case 0:
-                addon.innerHTML="+$1/mo";
-                break;
-            case 1:
-                addon.innerHTML="+$2/mo";
-                break;
-            case 2:
-                addon.innerHTML="+$2/mo";
-                break;
-            default:
-                break;
-          }
-        }
-});});
+});
