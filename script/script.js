@@ -92,7 +92,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return isValid;
     }
-
+    function validateStep2() {
+        const plan = document.getElementById("do it");
+        const plan1 = document.getElementById("Arcade");
+        const plan2 = document.getElementById("Advanced");
+        const plan3 = document.getElementById("Pro");
+        function setError(element) {
+         element.style.color = "var(--strawberry-red)";
+        }
+    
+        function clearError(element) {
+            element.style.color = "";
+        }
+    
+        if (plan1.classList.contains("selected") || plan2.classList.contains("selected") || plan3.classList.contains("selected")) {
+            clearError(plan);
+            return true;
+        } else {
+            setError(plan);
+            return false;
+        }
+    }
+    
     // Initialize by showing the first step
     showStep(currentStep);
     // Event listeners for Next Step buttons
@@ -104,8 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("NextStep2").addEventListener("click", function () {
+        if (validateStep2()) {
         currentStep = 2;
         showStep(currentStep);
+        }
     });
 
     document.getElementById("NextStep3").addEventListener("click", function () {
@@ -169,9 +192,7 @@ const switcher = document.getElementById("switcher");
 const plans = [document.getElementById("arcade"),document.getElementById("advanced"),document.getElementById("pro")];
 const plansArray = Array.from(plans);
 const addons =[document.getElementById("onlineService"),document.getElementById("largerStorage"),document.getElementById("customizableProfile")];
-console.log(addons);
 const addonsArray = Array.from(addons);
-console.log(addonsArray);
 switcher.addEventListener("click", function () {
     plansArray.forEach((plan, index) => {
                 if (switcher.checked) {

@@ -1,145 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Multi-step form</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
-    <link rel="stylesheet" href="style/style.css" />
-  </head>
+  <title>Frontend Mentor | Multi-step form</title>
 
-  <body>
-    <div id="container">
-      <!-- Sidebar start -->
-      <div id="sidebar">
-        <div id="content">
-          <div class="step">
-            <div class="circle">
-              <p>1</p>
-            </div>
-            <div>
-              <p>Step 1</p>
-              <h3>Your info</h3>
-            </div>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- Sidebar start -->
+    <div id="sidebar">
+      <div id="content">
+        <div class="step">
+          <div class="circle">
+            <p>1</p>
           </div>
-
-          <div class="step">
-            <div class="circle">
-              <p>2</p>
-            </div>
-            <div>
-              <p>Step 2</p>
-              <h3>Select plan</h3>
-            </div>
+          <div>
+            <p>Step 1</p>
+            <h3>Your info</h3>
           </div>
+        </div>
 
-          <div class="step">
-            <div class="circle">
-              <p>3</p>
-            </div>
-            <div>
-              <p>Step 3</p>
-              <h3>Add-ons</h3>
-            </div>
+        <div class="step">
+          <div class="circle">
+            <p>2</p>
           </div>
-          <div class="step">
-            <div class="circle">
-              <p>4</p>
-            </div>
-            <div>
-              <p>Step 4</p>
-              <h3>Summary</h3>
-            </div>
+          <div>
+            <p>Step 2</p>
+            <h3>Select plan</h3>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="circle">
+            <p>3</p>
+          </div>
+          <div>
+            <p>Step 3</p>
+            <h3>Add-ons</h3>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">
+            <p>4</p>
+          </div>
+          <div>
+            <p>Step 4</p>
+            <h3>Summary</h3>
           </div>
         </div>
       </div>
-      <!-- Sidebar end -->
+    </div>
+    <!-- Sidebar end -->
 
-      <!-- Step 1 start -->
-      <div id="Step1">
-        <h1>Personal info</h1>
-        <p>Please provide your name, email address, and phone number.</p>
-        <div class="NEP">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="e.g. Stephen King" required />
+    <!-- Step 1 start -->
+    <div id="Step1">
+      <h1>Personal info</h1>
+      <p>Please provide your name, email address, and phone number.</p>
+      <div class="NEP">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="e.g. Stephen King" required />
 
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required />
 
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required/>
-        </div>
-
-        <button id="NextStep1" class="NextStep">Next Step</button>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required />
       </div>
-      <!-- Step 1 end -->
 
-      <!-- Step 2 start -->
-      <div id="Step2" >
-        <h1>Select your plan</h1>
-        <p class="first">You have the option of monthly or yearly billing.</p>
-        <div class="havingall">
-          <div  class="same" id="Arcade">
-            <img src="assets/images/icon-arcade.svg" alt="icon" />
-            <div id="arcade" class="samei" class="plan-info">
-              <h4>Arcade</h4>
-              <p>$9/mo</p>
-            </div>
-          </div>
+      <button id="NextStep1" class="NextStep">Next Step</button>
+    </div>
+    <!-- Step 1 end -->
 
-          <div class="same" id="Advanced">
-            <img src="assets/images/icon-advanced.svg" alt="icon" />
-            <div id="advanced" class="samei" class="plan-info">
-              <h4>Advanced</h4>
-              <p>$12/mo</p>
-            </div>
-          </div>
-
-          <div class="same" id="Pro">
-            <img src="assets/images/icon-pro.svg" alt="icon" />
-            <div  id="pro" class="samei" class="plan-info">
-              <h4>Pro</h4>
-              <p>$15/mo</p>
-            </div>
+    <!-- Step 2 start -->
+    <div id="Step2">
+      <h1 id="do it">Select your plan</h1>
+      <p class="first">You have the option of monthly or yearly billing.</p>
+      <div class="havingall">
+        <div class="same" id="Arcade">
+          <img src="assets/images/icon-arcade.svg" alt="icon" />
+          <div id="arcade" class="samei" class="plan-info">
+            <h4>Arcade</h4>
+            <p>$9/mo</p>
           </div>
         </div>
 
-        <div id="billing">
-          <p>Monthly</p>
-          <label class="switch">
-            <input type="checkbox" id="switcher"/>
-            <span class="slider round"></span>
-          </label>
-          <p>Yearly</p>
+        <div class="same" id="Advanced">
+          <img src="assets/images/icon-advanced.svg" alt="icon" />
+          <div id="advanced" class="samei" class="plan-info">
+            <h4>Advanced</h4>
+            <p>$12/mo</p>
+          </div>
         </div>
 
-        <div id="buttons">
-          <button id="GoBack2" class="GoBack">Go Back</button>
-          <button id="NextStep2"  class="NextStep">Next Step</button>
+        <div class="same" id="Pro">
+          <img src="assets/images/icon-pro.svg" alt="icon" />
+          <div id="pro" class="samei" class="plan-info">
+            <h4>Pro</h4>
+            <p>$15/mo</p>
+          </div>
         </div>
       </div>
-      <!-- Step 2 end -->
 
-      <!-- Step 3 start -->
-      <div id="Step3">
-        <div id="addons-info">
+      <div id="billing">
+        <p>Monthly</p>
+        <label class="switch">
+          <input type="checkbox" id="switcher" />
+          <span class="slider round"></span>
+        </label>
+        <p>Yearly</p>
+      </div>
+
+      <div id="buttons">
+        <button id="GoBack2" class="GoBack">Go Back</button>
+        <button id="NextStep2" class="NextStep">Next Step</button>
+      </div>
+    </div>
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+    <div id="Step3">
+      <div id="addons-info">
         <div>
-        <h1>Pick add-ons</h1>
-        <p>Add-ons help enhance your gaming experience.</p>
-      </div>
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+        </div>
         <div id="addons">
           <div id="OnlineService" class="addon">
             <div class="ceperated">
-              <input type="checkbox" id="online-service-checkbox" class="checkbox"/>
+              <input type="checkbox" id="online-service-checkbox" class="checkbox" />
               <label for="online-service-checkbox">
                 <div class="addon-info">
                   <h4>Online service</h4>
@@ -153,7 +149,7 @@
             <div class="ceperated">
               <input type="checkbox" id="larger-storage-checkbox" class="checkbox" />
               <label for="larger-storage-checkbox">
-                <div class="addon-info" >
+                <div class="addon-info">
                   <h4>Larger storage</h4>
                   <p>Extra 1TB of cloud save</p>
                 </div>
@@ -175,43 +171,46 @@
           </div>
         </div>
       </div>
-        <div id="move">
-          <button id="GoBack3" class="GoBack">Go Back</button>
-          <button id="NextStep3" class="NextStep">Next Step</button>
-        </div>
+      <div id="move">
+        <button id="GoBack3" class="GoBack">Go Back</button>
+        <button id="NextStep3" class="NextStep">Next Step</button>
       </div>
-      <!-- Step 3 end -->
-
-      <!-- Step 4 start -->
-      <div id="Step4">
-        <h1>Finishing up</h1>
-        <p class="la">Double-check everything looks OK before confirming.</p>
-
-        <!-- Dynamically add subscription and add-on selections here -->
-
-        <p class="li">Total (per month/year)</p>
-        <div class="buttoons" id="rlast">
-          <button id="GoBack4" class="GoBack">Go Back</button>
-          <button id="Confirm" class="NextStep">Confirm</button>
-        </div>
-      </div>
-      <!-- Step 4 end -->
-
-      <!-- Step 5 start -->
-      <div id="Step5" >
-        <img
-          src="assets/images/icon-thank-you.svg"
-          alt="Thank you"
-        />
-        <h1>Thank you!</h1>
-        <p>
-          Thanks for confirming your subscription! We hope you have fun using
-          our platform. If you ever need support, please feel free to email us
-          at support@loremgaming.com.
-        </p>
-      </div>
-      <!-- Step 5 end -->
     </div>
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+    <div id="Step4">
+      <h1>Finishing up</h1>
+      <p class="la">Double-check everything looks OK before confirming.</p>
+      <div id="here">
+        <div id="colored">
+          <!-- Dynamically add subscription and add-on selections here -->
+          <div id>="subscription"></div>
+          <div id="selections"></div>
+          <!-- Dynamically add total price here -->
+        </div>
+        <div id="total"></div>
+      </div>
+      <div class="buttoons" id="rlast">
+        <button id="GoBack4" class="GoBack">Go Back</button>
+        <button id="Confirm" class="NextStep">Confirm</button>
+      </div>
+    </div>
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+    <div id="Step5">
+      <img src="assets/images/icon-thank-you.svg" alt="Thank you" />
+      <h1>Thank you!</h1>
+      <p>
+        Thanks for confirming your subscription! We hope you have fun using
+        our platform. If you ever need support, please feel free to email us
+        at support@loremgaming.com.
+      </p>
+    </div>
+    <!-- Step 5 end -->
+  </div>
   <script src=" script/script.js"></script>
-  </body>
+</body>
+
 </html>
