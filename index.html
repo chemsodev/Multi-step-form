@@ -112,7 +112,7 @@
       <div id="billing">
         <p>Monthly</p>
         <label class="switch">
-          <input type="checkbox" id="switcher" />
+          <input type="checkbox" id="switcher"/>
           <span class="slider round"></span>
         </label>
         <p>Yearly</p>
@@ -138,7 +138,7 @@
               <input type="checkbox" id="online-service-checkbox" class="checkbox" />
               <label for="online-service-checkbox">
                 <div class="addon-info">
-                  <h4>Online service</h4>
+                  <h4 id="onlineService">Online service</h4>
                   <p>Access to multiplayer games</p>
                 </div>
               </label>
@@ -186,9 +186,10 @@
         <div id="colored">
           <!-- Dynamically add subscription and add-on selections here -->
           <div id="subscription"></div>
+          <hr>
           <div id="selections"></div>
-          <!-- Dynamically add total price here -->
         </div>
+        <!-- Dynamically add total price here -->
         <div id="total"></div>
       </div>
       <div class="buttoons" id="rlast">

@@ -459,13 +459,10 @@ input:checked + .slider:before {
 } 
 
 #Step4 .la{
-  color: var(--cool-gray); 
-  padding-bottom: 18vw;
-} 
+  color: var(--cool-gray); } 
 
 #Step4 .li{
   color: var(--cool-gray); 
-  padding-bottom: 7vw;
 } 
 
 #Confirm{
@@ -483,6 +480,7 @@ input:checked + .slider:before {
   flex-direction: row; 
   align-items: center; 
   justify-content: center;  
+  margin-top: 17vw;
 }
 #name ,
 #email ,
@@ -531,4 +529,12 @@ border-radius: 16px;
 
 #Step2 .free{
   color: var(--marine-blue);
+}
+
+#colored{
+background-color: var(--light-gray);
+border-radius: 16px ;
+width: 60%;
+height: 10vw;
+margin-top: 4vw;
 }

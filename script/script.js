@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
         plan: null,
         addOns: []
     };
+    let billingmode="Monthly";
+    let bm="mo";
+    let my="month"
 
     function showStep(step) {
         steps.forEach((stepInfo, index) => {
@@ -133,20 +136,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add selected plan
         if (userSelections.plan) {
-            subscriptionElement.innerHTML = `<p>${userSelections.plan.name} (Monthly)</p><p>$${userSelections.plan.price}/mo</p>`;
+            subscriptionElement.innerHTML = `<div id="selectedplan"><h4>${userSelections.plan.name} (${billingmode})</h4> <a id="change" href="#">Change</a></div><p>$${userSelections.plan.price}/${bm}</p>`;
         }
-
         // Add selected add-ons
         let totalPrice = userSelections.plan ? userSelections.plan.price : 0;
         userSelections.addOns.forEach(addOn => {
             const addOnElement = document.createElement('div');
-            addOnElement.innerHTML = `<p>${addOn.name}</p><p>+$${addOn.price}/mo</p>`;
+            addOnElement.innerHTML = `<div class="selectedaddon"><p>${addOn.name}</p><p>+$${addOn.price}/${bm}</p></div>`;
             selectionsElement.appendChild(addOnElement);
             totalPrice += addOn.price;
         });
 
         // Add total price
-        totalElement.innerHTML = `<p>Total (per month): $${totalPrice}/mo</p>`;
+        totalElement.innerHTML = `<p>Total (per ${my}): $${totalPrice}/${bm}</p>`;
     }
 
     // Initialize by showing the first step
@@ -175,16 +177,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-
     document.getElementById("NextStep3").addEventListener("click", function () {
-        const selectedAddOns = document.querySelectorAll('input[type="checkbox"]:checked');
-        userSelections.addOns = Array.from(selectedAddOns).map(addOn => ({
-            name: addOn.parentElement.querySelector('h4').innerText,
-            price: parseInt(addOn.parentElement.parentElement.getElementsByClassName("addon-price")[0].innerHTML.replace(/[^0-9]/g, ''))}));
+        const selectedAddOns = document.querySelectorAll('input[class="checkbox"]:checked');
+        userSelections.addOns = Array.from(selectedAddOns).map(addOn => {
+            const h4Element = addOn.parentElement.querySelector('h4');
+            console.log(addOn, h4Element);
+            return {
+                name: h4Element ? h4Element.innerText : '',
+                price: parseInt(addOn.parentElement.parentElement.getElementsByClassName("addon-price")[0].innerHTML.replace(/[^0-9]/g, ''))
+            };
+        });
         updateStep4();
         currentStep = 3;
         showStep(currentStep);
     });
+    
 
     document.getElementById("Confirm").addEventListener("click", function () {
         currentStep = 4;
@@ -264,6 +271,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     default:
                         break;
                 }
+                billingmode= "Yearly";
+                bm="yr";
+                my="year";
             } else {
                 switch (index) {
                     case 0:
@@ -281,6 +291,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     default:
                         break;
                 }
+                billingmode= "Monthly"; 
+                bm="mo";
+                my="month";
             }
         });
 
