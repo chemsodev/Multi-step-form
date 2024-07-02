@@ -4,7 +4,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 U can see the website [here](https://chemsodev.github.io/Multi-step-form/).
 # Overview
 ## Screenshot
-![website screenshoot](assets/images/image.webp?raw=true "screenshoot")
+![website screenshoot](assets/images/image.png?raw=true "screenshoot")
 # My process
 ## Built with
 
