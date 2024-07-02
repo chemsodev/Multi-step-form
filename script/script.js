@@ -142,13 +142,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let totalPrice = userSelections.plan ? userSelections.plan.price : 0;
         userSelections.addOns.forEach(addOn => {
             const addOnElement = document.createElement('div');
-            addOnElement.innerHTML = `<div class="selectedaddon"><p>${addOn.name}</p><p>+$${addOn.price}/${bm}</p></div>`;
+            addOnElement.innerHTML = `<div class="selectedaddon"><p>${addOn.name}</p><p class="price">+$${addOn.price}/${bm}</p></div>`;
             selectionsElement.appendChild(addOnElement);
             totalPrice += addOn.price;
         });
 
         // Add total price
-        totalElement.innerHTML = `<p>Total (per ${my}): $${totalPrice}/${bm}</p>`;
+        totalElement.innerHTML = `<p>Total (per ${my}):</><p id="totalprice">+$${totalPrice}/${bm}</p>`;
     }
 
     // Initialize by showing the first step
