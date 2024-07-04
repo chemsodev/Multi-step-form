@@ -135,9 +135,20 @@ document.addEventListener("DOMContentLoaded", function () {
         totalElement.innerHTML = '';
 
         // Add selected plan
-        if (userSelections.plan) {
-            subscriptionElement.innerHTML = `<div id="selectedplan"><h4>${userSelections.plan.name} (${billingmode})</h4></div><p>$${userSelections.plan.price}/${bm}</p>`;
-        }
+if (userSelections.plan) {
+    subscriptionElement.innerHTML = `
+        <div id="selectedplan">
+            <h4>${userSelections.plan.name} (${billingmode})</h4>
+                <a id="change" href="#">Change</a>
+        </div>
+        <p>$${userSelections.plan.price}/${bm}</p>`;
+    
+    document.getElementById("change").addEventListener("click", function(event) {
+        event.preventDefault();
+        currentStep = 1;
+        showStep(currentStep);
+    });
+}
         // Add selected add-ons
         let totalPrice = userSelections.plan ? userSelections.plan.price : 0;
         userSelections.addOns.forEach(addOn => {
@@ -196,10 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentStep = 4;
         showStep(currentStep);
     });
- document.getElementById("change").addEventListener("click", function () {
-        currentStep = 1;
-        showStep(currentStep);
-    });
+
     // Event listeners for Go Back buttons
     document.getElementById("GoBack2").addEventListener("click", function () {
         currentStep = 0;
