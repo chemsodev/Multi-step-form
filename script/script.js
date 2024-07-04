@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add selected plan
         if (userSelections.plan) {
-            subscriptionElement.innerHTML = `<div id="selectedplan"><h4>${userSelections.plan.name} (${billingmode})</h4> <button id="change"> <a href="#">Change</a></div> </button>  <p>$${userSelections.plan.price}/${bm}</p>`;
+            subscriptionElement.innerHTML = `<div id="selectedplan"><h4>${userSelections.plan.name} (${billingmode})</h4></div><p>$${userSelections.plan.price}/${bm}</p>`;
         }
         // Add selected add-ons
         let totalPrice = userSelections.plan ? userSelections.plan.price : 0;
