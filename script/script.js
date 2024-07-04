@@ -191,13 +191,8 @@ document.addEventListener("DOMContentLoaded", function () {
         currentStep = 3;
         showStep(currentStep);
     });
-    
-     document.getElementById("change").addEventListener("click", function () {
-        currentStep = 1;
-        showStep(currentStep);
-    });
 
-    document.getElementById("Confirm").addEventListener("click", function () {
+    document.getElementById("change").addEventListener("click", function () {
         currentStep = 4;
         showStep(currentStep);
     });
