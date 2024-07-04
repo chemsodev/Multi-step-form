@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showStep(currentStep);
     });
     document.getElementById("change".addEventListener("click", function () {
-                currentStep = 0;
+                currentStep = 1;
         showStep(currentStep);
     });
     
